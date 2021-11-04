@@ -3,7 +3,7 @@ kind: Namespace
 metadata:
   labels:
     app: demo
+    istio.io/rev: asm-1112-17
   name: demo
   annotations:
     demo: "true"
-    istio.io/rev: asm-1112-17
