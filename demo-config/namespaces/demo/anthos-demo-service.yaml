@@ -14,5 +14,3 @@ spec:
     app: anthos-demo
   sessionAffinity: None
   type: ClusterIP
-status:
-  loadBalancer: {}
