@@ -3,8 +3,6 @@ kind: Namespace
 metadata:
   labels:
     app: demo
-  annotations:
-    configsync.gke.io/cluster-name-selector: cluster-1    
   name: demo
   annotations:
     demo: "true"
