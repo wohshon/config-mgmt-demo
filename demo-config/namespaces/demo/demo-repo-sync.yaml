@@ -1,0 +1,14 @@
+apiVersion: configsync.gke.io/v1beta1
+kind: RepoSync
+metadata:
+  name: repo-sync
+  namespace: gamestore
+spec:
+  sourceFormat: unstructured
+  git:
+    repo: ssh://wohshon@wohshon.altostrat.com@source.developers.google.com:2022/p/anthos-hub-1635687135/r/anthos-config-mgmt
+    branch: main
+    dir: demo-config
+    auth: ssh
+    secretRef:
+      name: git-creds
