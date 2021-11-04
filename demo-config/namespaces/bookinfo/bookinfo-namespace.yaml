@@ -6,3 +6,4 @@ metadata:
   name: bookinfo
   annotations:
     demo: "true"
+    istio.io/rev: asm-1112-17
