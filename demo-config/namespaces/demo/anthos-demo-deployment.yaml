@@ -14,7 +14,8 @@ spec:
   strategy: {}
   template:
     metadata:
-      creationTimestamp: null
+    annotations:
+      configsync.gke.io/cluster-name-selector: cluster-1    
       labels:
         app: anthos-demo
     spec:
