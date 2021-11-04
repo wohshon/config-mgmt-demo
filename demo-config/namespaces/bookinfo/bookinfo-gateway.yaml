@@ -1,8 +1,8 @@
 apiVersion: networking.istio.io/v1alpha3
 kind: Gateway
 metadata:
-  name: anthos-demo-gateway
-  namespace: demo
+  name: bookinfo-gateway
+  namespace: bookinfo
 spec:
   selector:
     istio: ingressgateway # use istio default controller
@@ -17,19 +17,27 @@ spec:
 apiVersion: networking.istio.io/v1alpha3
 kind: VirtualService
 metadata:
-  name: anthos-demo-vs
-  namespace: demo
+  name: bookinfo
+  namespace: bookinfo
 spec:
   hosts:
   - "*"
   gateways:
-  - anthos-demo-gateway
+  - bookinfo-gateway
   http:
   - match:
     - uri:
-        prefix: /
+        exact: /productpage
+    - uri:
+        prefix: /static
+    - uri:
+        exact: /login
+    - uri:
+        exact: /logout
+    - uri:
+        prefix: /api/v1/products
     route:
     - destination:
-        host: anthos-demo
+        host: productpage
         port:
-          number: 8080
+          number: 9080
