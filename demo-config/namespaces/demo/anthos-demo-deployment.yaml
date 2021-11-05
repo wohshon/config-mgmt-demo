@@ -26,6 +26,6 @@ spec:
         - name: APP_VERSION
           value: "1.0"
         - name: GREETINGS
-          value: "Anthos demo!"
+          value: "Anthos demo"
         resources: {}
 status: {}
